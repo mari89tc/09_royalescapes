@@ -1,0 +1,55 @@
+---
+---
+
+<form>
+  <label for="title">Title:</label>
+  <input id="title" name="title" type="text" required />
+
+  <label for="long">Long Description:</label>
+  <textarea id="long" name="long" rows="6" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+<script>
+  function addTestimonial(newTestimonial) {
+    //dette er funktionen der putter data i tabbellen i databasen
+
+    const url = "https://rrjchnmyyadrlcdgbfos.supabase.co/rest/v1/tema9_royalescape";
+    const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJyamNobm15eWFkcmxjZGdiZm9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE0NTY2MDksImV4cCI6MTk5NzAzMjYwOX0.QxBxwMI-6gxd3CCyPXxX1tiO3eMB300aEb1JE3bS_uc";
+
+    const options = {
+      method: "POST", //post gør at den putter noget i tabellen istedet for at hente
+      headers: {
+        apikey: api,
+        Authorization: "Bearer " + api,
+        "Content-Type": "application/json",
+        Prefer: "return=representation",
+      },
+      body: JSON.stringify(newTestimonial), //laver variablen newTestimonial til json (her er det et objekt med 2 værdier)
+    };
+
+    console.log("options:", options);
+
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data:", data);
+        //når den er færdig med at putte i databasen går den til filen addTestimonialfeedback "/" er for at sikre at den leder i roden
+        window.location.href = "/addtestimonialsfeedback";
+      });
+  }
+
+  const form = document.querySelector("form");
+  console.log("form.elements", form.elements);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const obj = {
+      title: form.elements.title.value,
+      description: form.elements.long.value,
+    };
+
+    addTestimonial(obj);
+  });
+</script>

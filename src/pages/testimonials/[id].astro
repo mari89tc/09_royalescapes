@@ -1,0 +1,29 @@
+---
+export async function getStaticPaths() {
+  const url = "https://rrjchnmyyadrlcdgbfos.supabase.co/rest/v1/tema9_royalescape";
+
+  const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJyamNobm15eWFkcmxjZGdiZm9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE0NTY2MDksImV4cCI6MTk5NzAzMjYwOX0.QxBxwMI-6gxd3CCyPXxX1tiO3eMB300aEb1JE3bS_uc";
+
+  const options = {
+    method: "GET",
+    headers: {
+      apikey: api,
+    },
+  };
+
+  const data = await fetch(url, options).then((res) => res.json());
+
+  return data.map((singleTestimonial) => {
+    return {
+      params: { id: singleTestimonial.title + "_" + singleTestimonial.id },
+      props: { singleTestimonial },
+    };
+  });
+}
+const { singleTestimonial } = Astro.props;
+import MainLayout from "../../layouts/Main.astro";
+---
+
+<MainLayout title={singleTestimonial.title}>
+  {singleTestimonial.description}
+</MainLayout>

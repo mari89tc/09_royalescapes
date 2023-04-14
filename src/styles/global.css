@@ -7,7 +7,9 @@ body {
 img {
   max-width: 100%;
 }
-
+.logo {
+  max-width: 100px;
+}
 /* fonte 
   h1
   font-family: 'Dosis', sans-serif;

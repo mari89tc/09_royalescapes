@@ -1,5 +1,9 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
 const { type = "" } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <html lang="en">
@@ -8,12 +12,13 @@ const { type = "" } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Royal Escapes</title>
+    <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet" />
   </head>
   <body class={type}>
+    <Header />
     <header>
       <div id="mainmenu">
         <slot name="header-slot" />
@@ -21,11 +26,12 @@ const { type = "" } = Astro.props;
           <a href="/"><img src="/logo.png" alt="logo" /></a>
         </div>
       </div>
-
-      <main>
-        <slot />
-      </main>
     </header>
+    <main>
+      <h1>{title}</h1>
+      <slot />
+      <Footer />
+    </main>
   </body>
 </html>
 <style></style>
