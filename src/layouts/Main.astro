@@ -1,0 +1,31 @@
+---
+const { type = "" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Royal Escapes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet" />
+  </head>
+  <body class={type}>
+    <header>
+      <div id="mainmenu">
+        <slot name="header-slot" />
+        <div class="logo">
+          <a href="/"><img src="/logo.png" alt="logo" /></a>
+        </div>
+      </div>
+
+      <main>
+        <slot />
+      </main>
+    </header>
+  </body>
+</html>
+<style></style>

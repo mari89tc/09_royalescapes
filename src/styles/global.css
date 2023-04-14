@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+
+/* fonte 
+  h1
+  font-family: 'Dosis', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+  */
+h1 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+}
+h2 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+h3 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* colors
+  color: #D2573F; mørk rød
+  color: #EF9786; lys rød
+  color: #3C3C3C; sort ish
+  color: #FFFFFF; hvid
+  */
