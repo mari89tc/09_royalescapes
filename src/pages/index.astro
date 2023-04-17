@@ -1,11 +1,48 @@
 ---
 import Addtestimonial from "../components/Addtestimonial.astro";
+import Linkbutton from "../components/Linkbutton.astro";
+import Socialmedie from "../components/Socialmedie.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Main from "../layouts/Main.astro";
 ---
 
-<Main title="Forside">
-  <p>Her er indholdet</p>
-  <Testimonials />
-  <Addtestimonial />
+<Main title="The Royal Playroom">
+  <video autoplay muted loop src=""></video>
+  <section>
+    <div class="">
+      <h2>Lås op til en flugt fra hverdagen</h2>
+    </div>
+    <div class="tekst">
+      <p>
+        Velkommen til the Royal Playroom. I over 100 år er dette royale børneværelse blevet brugt af kommende konger og dronninger da de stadig var børn. Men én konge blev frarøvet hans skæbne og har derfor hjemsøgt børneværelset lige siden. Selv
+        årtier efter hans forsvinden, da dronningen overtog børneværelset, har han ikke ladet hende være i fred. Og nu er det tid til at I beviser jeres værd ved at løse en mystisk opgave for dronningen for at blive hendes royale livvagter.
+      </p>
+    </div>
+    <a href="https://www.royalescapes.dk/dk/book-escape-room">
+      <div>
+        <h3>Er du værdig til at være dronningens livvagt? Find ud af det, ved at booke tid ved Royal Escapes her!</h3>
+      </div>
+    </a>
+    <div>
+      <Socialmedie />
+    </div>
+    <div>
+      <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Prøv The Royal Playroom her" />
+    </div>
+    <Testimonials />
+    <Addtestimonial />
+  </section>
 </Main>
+<style>
+  section {
+    margin: 50px;
+  }
+  .tekst {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 600px;
+  }
+  .tekst p {
+    width: fit-content;
+  }
+</style>

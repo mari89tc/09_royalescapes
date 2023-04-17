@@ -5,7 +5,7 @@
   <label for="title">Title:</label>
   <input id="title" name="title" type="text" required />
 
-  <label for="long">Long Description:</label>
+  <label for="long">How was the experience?</label>
   <textarea id="long" name="long" rows="6" required></textarea>
 
   <button type="submit">Submit</button>
@@ -53,3 +53,54 @@
     addTestimonial(obj);
   });
 </script>
+<style>
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 40px;
+  }
+  label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    width: 550px;
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3c3c3c;
+  }
+  input {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    width: 550px;
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ffffff;
+    border: #3c3c3c 2px solid;
+  }
+  textarea {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    width: 550px;
+    padding: 15px;
+    text-decoration: none;
+    color: #3c3c3c;
+    background-color: #ffffff;
+    border: #3c3c3c 2px solid;
+  }
+  form button {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    width: 550px;
+    padding: 15px;
+    text-decoration: none;
+    border: none;
+    background-color: #ef9786;
+    color: #3c3c3c;
+    margin-top: 20px;
+  }
+</style>
