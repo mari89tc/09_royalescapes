@@ -18,7 +18,7 @@ import Main from "../layouts/Main.astro";
         årtier efter hans forsvinden, da dronningen overtog børneværelset, har han ikke ladet hende være i fred. Og nu er det tid til at I beviser jeres værd ved at løse en mystisk opgave for dronningen for at blive hendes royale livvagter.
       </p>
     </div>
-    <a href="https://www.royalescapes.dk/dk/book-escape-room">
+    <a class="linkher" href="https://www.royalescapes.dk/dk/book-escape-room">
       <div>
         <h3>Er du værdig til at være dronningens livvagt? Find ud af det, ved at booke tid ved Royal Escapes her!</h3>
       </div>
@@ -43,6 +43,13 @@ import Main from "../layouts/Main.astro";
     width: 600px;
   }
   .tekst p {
+    width: fit-content;
+  }
+  .linkher {
+    display: grid;
+    width: 400px;
+  }
+  .linkher div {
     width: fit-content;
   }
 </style>
