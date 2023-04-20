@@ -8,9 +8,28 @@ function getFirstNChars(str, length) {
 
 <article>
   <h2>{data.title}</h2>
-
   <p>
-    {getFirstNChars(data.description, 20)}...
+    {getFirstNChars(data.description, 35)}...
     <a href={"testimonials/" + data.title + "_" + data.id}>Læs mere her</a>
   </p>
 </article>
+<style>
+  h2 {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #ffffff;
+  }
+  p {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  a {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+  }
+</style>

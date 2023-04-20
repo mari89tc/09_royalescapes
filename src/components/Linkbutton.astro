@@ -2,54 +2,40 @@
 const { text, href = "/" } = Astro.props;
 ---
 
-<a href={href}>
-  <p>{text}</p>
-</a>
+<button>
+  <a href={href}>
+    <p>{text}</p>
+  </a>
+</button>
+
 <style>
-  a {
+  button {
     background-color: #ef9786;
-    text-decoration: none;
-    outline: none;
-    margin-top: 80px;
-    width: 250px;
     border: none;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: fit-content;
   }
-  a p {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #ffffff;
-    line-height: 32px;
-    text-align: center;
-  }
-  a:hover {
+  button:hover {
     background-color: #d2573f;
     text-decoration: none;
     outline: none;
-    margin-top: 80px;
-    width: 250px;
+    width: fit-content;
     border: none;
   }
-  a:hover p {
+  button a {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 14px;
-    color: #ffffff;
-    line-height: 32px;
-  }
-  a:active {
-    background-color: #d2573f;
     text-decoration: none;
-    outline: none;
-    margin-top: 80px;
-    width: 250px;
-    border: none;
+    color: #3c3c3c;
   }
-  a:active p {
+  button p {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 14px;
-    color: #ffffff;
-    line-height: 32px;
+    text-decoration: none;
+    color: #3c3c3c;
   }
 </style>
