@@ -1,5 +1,5 @@
 ---
-const { title } = Astro.props;
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -8,16 +8,13 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
   </head>
   <body>
-    <header>
-      <h1>{title}</h1>
-    </header>
+    <Header />
     <main>
-      <div></div>
-      <h2>Lås op til en flugt fra hverdagen</h2>
-      <slot />
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="arrow.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></lottie-player>
+      <h2>"Lås op til en flugt fra hverdagen"</h2>
     </main>
   </body>
 </html>
