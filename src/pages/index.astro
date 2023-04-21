@@ -7,10 +7,12 @@ import Main from "../layouts/Main.astro";
 ---
 
 <Main title="The Royal Playroom">
-  <video width="100%" height="100%" autoplay muted loop src="public/hero01.mp4"></video>
   <section>
     <div class="">
-      <h2>Lås op til en flugt fra hverdagen</h2>
+      <h2>"Lås op til en flugt fra hverdagen"</h2>
+    </div>
+    <div>
+      <img src="/playroom.png" alt="playroom logo" />
     </div>
     <div class="tekst">
       <p>
@@ -18,6 +20,10 @@ import Main from "../layouts/Main.astro";
         dag. For at blive dronningens royale livvagter, skal I nu demonstrere jeres værd ved at løse en mystisk opgave.
       </p>
     </div>
+    <div>
+      <img src="dronning2.webp" alt="dronning 2" />
+    </div>
+
     <a class="linkher" href="https://www.royalescapes.dk/dk/book-escape-room">
       <div>
         <h3>Er du værdig til at være dronningens livvagt? Find ud af det, ved at booke tid ved Royal Escapes her!</h3>
@@ -27,10 +33,13 @@ import Main from "../layouts/Main.astro";
       <Socialmedie />
     </div>
     <div>
-      <img src="dronning2.webp" alt="dronning 2" />
+      <img src="/krone.webp" alt="krone" />
     </div>
     <div>
       <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Prøv The Royal Playroom her" />
+    </div>
+    <div>
+      <img src="/dronning1.webp" alt="dronning" />
     </div>
     <Testimonials />
     <Addtestimonial />
@@ -51,8 +60,12 @@ import Main from "../layouts/Main.astro";
   .linkher {
     display: grid;
     width: 400px;
+    text-decoration: underline #ffffff 1px;
   }
   .linkher div {
     width: fit-content;
+  }
+  img {
+    width: 350px;
   }
 </style>

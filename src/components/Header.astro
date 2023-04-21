@@ -3,17 +3,28 @@ import Linkbutton from "./Linkbutton.astro";
 ---
 
 <header>
-  <section>
-    <div class="logo">
-      <a href="https://www.royalescapes.dk"><img src="/logo.svg" alt="logo" /></a>
-    </div>
-    <div class="book">
-      <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Book din tid her" />
+  <section class="container">
+    <video width="100%" height="100%" autoplay muted loop src="public/hero01.mp4"></video>
+    <div class="head">
+      <div class="logo">
+        <a href="https://www.royalescapes.dk"><img src="/logo.svg" alt="logo" /></a>
+      </div>
+      <div class="book">
+        <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Book din tid her" />
+      </div>
+      <div class="arrow">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="artboard17.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+      </div>
     </div>
   </section>
 </header>
 <style>
-  section {
+  .container {
+    position: relative;
+    text-align: center;
+  }
+  head {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: flex-end;
@@ -21,9 +32,20 @@ import Linkbutton from "./Linkbutton.astro";
   }
   .logo {
     margin: 20px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
   }
   .book {
-    margin-top: 20px;
-    margin-right: 20px;
+    /* margin-top: 20px;
+    margin-right: 20px; */
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  .arrow {
+    position: absolute;
+    top: 80%;
+    left: 45%;
   }
 </style>
