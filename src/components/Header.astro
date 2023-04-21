@@ -1,0 +1,29 @@
+---
+import Linkbutton from "./Linkbutton.astro";
+---
+
+<header>
+  <section>
+    <div class="logo">
+      <a href="https://www.royalescapes.dk"><img src="/logo.svg" alt="logo" /></a>
+    </div>
+    <div class="book">
+      <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Book din tid her" />
+    </div>
+  </section>
+</header>
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-end;
+    justify-content: space-between;
+  }
+  .logo {
+    margin: 20px;
+  }
+  .book {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+</style>

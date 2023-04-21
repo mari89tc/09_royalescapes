@@ -19,14 +19,6 @@ const { title } = Astro.props;
   </head>
   <body class={type}>
     <Header />
-    <header>
-      <div id="mainmenu">
-        <slot name="header-slot" />
-        <div class="logo">
-          <a href="https://www.royalescapes.dk"><img src="/logo.svg" alt="logo" /></a>
-        </div>
-      </div>
-    </header>
     <main>
       <h1>{title}</h1>
       <slot />
