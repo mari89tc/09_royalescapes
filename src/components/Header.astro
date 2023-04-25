@@ -3,49 +3,73 @@ import Linkbutton from "./Linkbutton.astro";
 ---
 
 <header>
-  <section class="container">
+  <div class="head">
     <video width="100%" height="100%" autoplay muted loop src="/hero01.mp4"></video>
-    <div class="head">
-      <div class="logo">
-        <a href="https://www.royalescapes.dk"><img src="/logo.svg" alt="logo" /></a>
-      </div>
-      <div class="book">
-        <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Book din tid her" />
-      </div>
-      <div class="arrow">
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="artboard17.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
-      </div>
+    <div class="logo">
+      <a href="https://www.royalescapes.dk"><img src="/logo.svg" alt="logo" /></a>
     </div>
-  </section>
+    <div class="book">
+      <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Book din tid her" />
+    </div>
+    <div class="arrow">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="artboard17.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+    </div>
+  </div>
 </header>
 <style>
-  .container {
-    position: relative;
-    text-align: center;
+  img {
+    width: 300px;
+    aspect-ratio: 300/130;
   }
-  head {
+
+  .head {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-content: flex-end;
     justify-content: space-between;
   }
   .logo {
-    margin: 20px;
-    position: absolute;
-    top: 8px;
-    left: 16px;
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: start;
   }
   .book {
-    /* margin-top: 20px;
-    margin-right: 20px; */
-    position: absolute;
-    top: 8px;
-    right: 16px;
+    grid-area: 1 / 4 / 3 / 3;
+    justify-self: end;
+    margin: 20px;
   }
   .arrow {
-    position: absolute;
-    top: 80%;
-    left: 45%;
+    grid-area: 2 / 2 / 3 / 3;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 50px;
+  }
+  video {
+    grid-area: 1 / 1 / 3 / 4;
+  }
+  @media (max-width: 700px) {
+    .head {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: flex-end;
+      justify-content: space-between;
+    }
+    .logo {
+      grid-area: 1 / 1 / 2 / 2;
+      justify-self: start;
+    }
+    .book {
+      grid-area: 1 / 4 / 3 / 3;
+      justify-self: end;
+      margin: 20px;
+    }
+    .arrow {
+      grid-area: 2 / 2 / 3 / 3;
+      justify-self: center;
+      align-self: end;
+      margin-bottom: 10px;
+    }
   }
 </style>

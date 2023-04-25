@@ -9,7 +9,7 @@ function getFirstNChars(str, length) {
 <article>
   <h2>{data.title}</h2>
   <p>
-    {getFirstNChars(data.description, 35)}...
+    {getFirstNChars(data.description, 55)}...
     <a href={"testimonials/" + data.title + "_" + data.id}>Læs mere her</a>
   </p>
 </article>
@@ -23,20 +23,56 @@ function getFirstNChars(str, length) {
   p {
     font-family: "Dosis", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
   }
   a {
     font-family: "Dosis", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
   }
   article {
     display: grid;
+    margin-bottom: 80px;
+    margin-top: 40px;
   }
-  article h2 p {
+  h2 {
     justify-self: center;
-    align-self: center;
+  }
+  p {
+    justify-self: center;
+  }
+  @media (max-width: 700px) {
+    article {
+      margin-bottom: 100px;
+      margin-top: 40px;
+    }
+    h2 {
+      font-family: "Dosis", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #ffffff;
+      margin-top: 80px;
+    }
+    p {
+      font-family: "Dosis", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    a {
+      font-family: "Dosis", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #ffffff;
+    }
+    h2 {
+      justify-self: center;
+    }
+    p {
+      justify-self: center;
+    }
   }
 </style>

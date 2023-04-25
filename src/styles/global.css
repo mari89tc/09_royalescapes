@@ -8,9 +8,6 @@ body {
 img {
   max-width: 100%;
 }
-.logo {
-  max-width: 100px;
-}
 /* fonte 
   h1
   font-family: 'Dosis', sans-serif;
@@ -21,7 +18,9 @@ h1 {
   font-weight: 400;
   font-size: 52px;
   color: #ffffff;
-  margin-left: 500px;
+  margin-left: 400px;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 h2 {
   font-family: "Dosis", sans-serif;
@@ -38,10 +37,40 @@ h3 {
 p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   color: #ffffff;
+  line-height: 25px;
 }
 
+@media (max-width: 700px) {
+  h1 {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: #ffffff;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  h2 {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    color: #ffffff;
+  }
+  h3 {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+  }
+}
 /* colors
   color: #D2573F; mørk rød
   color: #EF9786; lys rød

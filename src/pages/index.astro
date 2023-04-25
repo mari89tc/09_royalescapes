@@ -6,40 +6,32 @@ import Testimonials from "../components/Testimonials.astro";
 import Main from "../layouts/Main.astro";
 ---
 
-<Main title="The Royal Playroom">
+<Main title="Lås op til en flugt fra hverdagen">
   <section>
-    <div class="">
-      <h2>"Lås op til en flugt fra hverdagen"</h2>
-    </div>
-    <div>
-      <img src="/playroom.png" alt="playroom logo" />
-    </div>
-    <div class="tekst">
-      <p>
-        Velkommen til The Royal Playroom. Dette børneværelse har i over 100 år været anvendt af kommende konger og dronninger i deres barndom. Desværre blev en konge frarøvet sin skæbne og har siden hjemsøgt rummet, hvilket fortsat er tilfældet i
-        dag. For at blive dronningens royale livvagter, skal I nu demonstrere jeres værd ved at løse en mystisk opgave.
-      </p>
-    </div>
-    <div>
-      <img src="dronning2.webp" alt="dronning 2" />
-    </div>
-
-    <a class="linkher" href="https://www.royalescapes.dk/dk/book-escape-room">
-      <div>
-        <h3>Er du værdig til at være dronningens livvagt? Find ud af det, ved at booke tid ved Royal Escapes her!</h3>
+    <div class="grid_1">
+      <div class="tekst">
+        <p>
+          Velkommen til The Royal Playroom. Dette børneværelse har i over 100 år været anvendt af kommende konger og dronninger i deres barndom. Desværre blev en konge frarøvet sin skæbne og har siden hjemsøgt rummet, hvilket fortsat er tilfældet i
+          dag. For at blive dronningens royale livvagter, skal I nu demonstrere jeres værd ved at løse en mystisk opgave.
+        </p>
       </div>
-    </a>
-    <div>
-      <Socialmedie />
-    </div>
-    <div>
-      <img src="/krone.webp" alt="krone" />
-    </div>
-    <div>
-      <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Prøv The Royal Playroom her" />
-    </div>
-    <div>
-      <img src="/dronning1.webp" alt="dronning" />
+      <div class="playroom">
+        <img src="/playroom.png" alt="playroom logo" />
+      </div>
+      <div class="img_dronning">
+        <img src="/dronning1.webp" alt="dronning" />
+      </div>
+      <a class="linkher" href="https://www.royalescapes.dk/dk/book-escape-room">
+        <div>
+          <h3>Er du værdig til at være dronningens livvagt? Find ud af det, ved at booke tid ved Royal Escapes her!</h3>
+        </div>
+      </a>
+      <div class="socialmedia">
+        <Socialmedie />
+      </div>
+      <div class="linkbutton">
+        <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Prøv The Royal Playroom her" />
+      </div>
     </div>
     <Testimonials />
     <Addtestimonial />
@@ -49,27 +41,76 @@ import Main from "../layouts/Main.astro";
   section {
     margin-left: 80px;
     margin-right: 80px;
-    /* display: grid; */
+  }
+  .grid_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
   }
   .tekst {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 600px;
+    grid-area: 1 / 1 / 2 / 2;
+    line-height: 22px;
+    margin: 30px;
+    justify-self: center;
   }
-  .tekst p {
-    width: fit-content;
+  .playroom {
+    grid-area: 1 / 2 / 2 / 2;
+    justify-self: center;
   }
-  .linkher {
-    display: grid;
-    width: 400px;
-    text-decoration: underline #ffffff 1px;
-  }
-  .linkher div {
-    width: fit-content;
+  .img_dronning {
+    grid-area: 2 / 1 / 2 /2;
+    justify-self: center;
   }
   img {
     width: 350px;
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+  .linkher {
+    text-decoration: underline #ffffff 1px;
+    grid-area: 2 / 2 / 3 /3;
+    padding: 80px;
+    justify-self: center;
+  }
+  .socialmedia {
+    grid-column: span 2;
+    justify-self: center;
+    margin-top: 50px;
+  }
+  .linkbutton {
+    grid-column: span 2;
+    justify-self: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: 700px) {
+    section {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .grid_1 {
+      display: block;
+    }
+    .playroom {
+      margin-left: 60px;
+      width: 300px;
+    }
+    .img_dronning {
+      margin-left: 60px;
+    }
+    img {
+      width: 300px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .linkher {
+      margin-left: 40px;
+    }
+    .socialmedia {
+      margin-left: 135px;
+    }
+    .linkbutton {
+      margin-left: 120px;
+    }
   }
 </style>

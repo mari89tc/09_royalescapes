@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Main from "../layouts/Main.astro";
 ---
 
 <html lang="en">
@@ -11,15 +12,14 @@ import Header from "../components/Header.astro";
   </head>
   <body>
     <Header />
-    <main>
+    <Main title="Lås op til en flugt fra hverdagen">
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       <lottie-player src="arrow.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></lottie-player>
-      <h2>"Lås op til en flugt fra hverdagen"</h2>
-    </main>
+    </Main>
   </body>
 </html>
 <style>
-  main {
+  body {
     background-color: #3c3c3c;
   }
 </style>
