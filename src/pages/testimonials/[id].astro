@@ -22,10 +22,73 @@ export async function getStaticPaths() {
 }
 const { singleTestimonial } = Astro.props;
 import MainLayout from "../../layouts/Main.astro";
+import "../../styles/global.css";
+import Linkbutton from "../../components/Linkbutton.astro";
 ---
 
+<header>
+  <div class="head">
+    <div class="logo">
+      <a href="https://www.royalescapes.dk"><img src="/logo.svg" alt="logo" /></a>
+    </div>
+    <div class="book">
+      <Linkbutton href="https://www.royalescapes.dk/dk/book-escape-room" text="Book din tid her" />
+    </div>
+  </div>
+</header>
 <MainLayout title={singleTestimonial.title}>
-  {singleTestimonial.description}
+  <p>
+    {singleTestimonial.description}
+  </p>
 </MainLayout>
 
-<style></style>
+<style>
+  img {
+    width: 300px;
+    aspect-ratio: 300/130;
+  }
+  p {
+    margin: 30px;
+    width: 500px;
+    margin-left: 400px;
+  }
+  .head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: flex-end;
+    justify-content: space-between;
+  }
+  .logo {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: start;
+  }
+  .book {
+    grid-area: 1 / 4 / 3 / 3;
+    justify-self: end;
+    margin: 20px;
+  }
+  @media (max-width: 700px) {
+    .head {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: flex-end;
+      justify-content: space-between;
+    }
+    .logo {
+      grid-area: 1 / 1 / 2 / 2;
+      justify-self: start;
+    }
+    .book {
+      grid-area: 1 / 4 / 3 / 3;
+      justify-self: end;
+      margin: 20px;
+    }
+    p {
+      margin: 20px;
+      width: 400px;
+      margin-left: 60px;
+    }
+  }
+</style>
