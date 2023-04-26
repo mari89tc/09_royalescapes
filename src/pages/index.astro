@@ -52,7 +52,7 @@ import Linkbutton from "../components/Linkbutton.astro";
   .head {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     justify-content: flex-end;
     justify-content: space-between;
   }
@@ -91,6 +91,16 @@ import Linkbutton from "../components/Linkbutton.astro";
       grid-area: 1 / 4 / 3 / 3;
       justify-self: end;
       margin: 20px;
+    }
+    .lock_animation {
+      background-image: url(/locked.svg);
+      aspect-ratio: 245/334;
+      width: 30%;
+    }
+    .lock_animation:hover {
+      background-image: url(/open.svg);
+      aspect-ratio: 245/334;
+      width: 30%;
     }
   }
 </style>
