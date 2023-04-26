@@ -1,9 +1,22 @@
 ---
-import MainLayout from "../layouts/Main.astro";
+import Main from "../layouts/Main.astro";
 ---
 
-<MainLayout title="Tak for hjælpen">
+<Main title="Tak for hjælpen">
   <p>Din feedback vil blive vist når vi har godkendt den her hos Royal Escapes</p>
-</MainLayout>
+</Main>
 
-<style></style>
+<style>
+  p {
+    margin-left: 500px;
+    text-align: center;
+    width: 400px;
+  }
+  @media (max-width: 700px) {
+    p {
+      margin-left: 150px;
+      text-align: center;
+      width: 200px;
+    }
+  }
+</style>
