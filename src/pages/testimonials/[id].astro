@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
   return data.map((singleTestimonial) => {
     return {
-      params: { id: singleTestimonial.title + "_" + singleTestimonial.id },
+      params: { id: singleTestimonial.id },
       props: { singleTestimonial },
     };
   });
